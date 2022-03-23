@@ -14,12 +14,21 @@ const Shop = () => {
 
     }, [])
 
+    const handelAddToCart = (product) => {
+        console.log(product)
+    }
+
 
     return (
         <div className='shop-container'>
             <div className='products-container'>
                 {
-                    products.map(product => <Product products={product}></Product>)
+                    products.map(product => <Product
+                        products={product}
+                        key={product.id}
+                        handelAddToCart={handelAddToCart}
+
+                    ></Product>)
                 }
 
             </div>
