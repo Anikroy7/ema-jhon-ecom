@@ -8,6 +8,7 @@
 
 .product-info{
     margin: 0px 15px;
+    padding:20 0px;
 }
 
 .product img{
@@ -42,6 +43,7 @@
     line-height: 14px;
     letter-spacing: 0.004em;
     color: #2A414F;
+   
 }
 
 .cart-btn{
@@ -53,6 +55,10 @@
     border: 1px solid #95A0A7;
     box-sizing: border-box;
     border-radius: 0px 0px 8px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 .cart-btn p{
     font-family: 'Lato';
@@ -64,4 +70,7 @@
 }
 .cart-btn:hover{
     background-color: orange;
+}
+.cart-text{
+margin-right:8px;
 }
