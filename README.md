@@ -1,4 +1,4 @@
-# Ema_Jhon_Ecom
+# Ema_Jhon_Ecommerce
 
 Live Site Link: https://playful-daifuku-eaaa31.netlify.app/
 ## Available Scripts
