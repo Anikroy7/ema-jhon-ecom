@@ -1,0 +1,20 @@
+.review-items-container{
+    border: 1px solid #95A0A7;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 21px;
+    width: 570px;
+    display: flex;
+}
+.review-items-container img{
+    width: 71px;
+}
+.review-details-container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+.review-details p{
+    margin: 0;
+}
