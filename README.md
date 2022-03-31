@@ -1,7 +1,6 @@
-# Getting Started with Create React App
+# Ema_Jhon_Ecom
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+Live Site Link: https://playful-daifuku-eaaa31.netlify.app/
 ## Available Scripts
 
 In the project directory, you can run:
