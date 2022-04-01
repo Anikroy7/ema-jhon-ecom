@@ -1,20 +1,58 @@
-.review-items-container{
+.review-items-container {
     border: 1px solid #95A0A7;
     border-radius: 8px;
     padding: 8px;
     margin: 21px;
     width: 570px;
+    height: 107px;
     display: flex;
+    align-items: center;
 }
-.review-items-container img{
+
+.review-items-container img {
     width: 71px;
+    height: 71px;
+    margin-right: 15px;
 }
-.review-details-container{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+
+.review-details-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.review-details p{
-    margin: 0;
+
+.review-details h3 {
+    margin: 5px;
+}
+
+.review-details p {
+    margin: 5px;
+}
+
+.orange {
+    color: orange;
+}
+
+.btn-container {
+    margin: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-btn {
+    background-color: rgba(235, 87, 87, 0.3);
+    height: 55px;
+    width: 55px;
+    border: 0;
+    border-radius: 50%;
+}
+
+.delete-icon {
+    color: rgba(235, 87, 87, 1);
+    height: 31px;
+    width: 27px;
+
+
 }
