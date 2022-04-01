@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import useCart from '../../hooks/useCart';
 import useProducts from '../../hooks/useProducts';
 import Cart from '../Cart/Cart'
@@ -9,7 +10,8 @@ const Orders = () => {
     const [products, setProducts] = useProducts();
     const [cart, setcart] = useCart(products);
 
-
+    const navigate = useNavigate();
+    console.log(navigate)
     const handelRemoveToCart = product => {
 
         const rest = cart.filter(pd => product.id !== pd.id);
@@ -25,13 +27,16 @@ const Orders = () => {
                         cart.map(product => <ReviewOrder
                             product={product}
                             handelRemoveToCart={handelRemoveToCart}
+                            key={product.id}
                         ></ReviewOrder>)
                     }
 
                 </div>
 
                 <div className='cart-container'>
-                    <Cart cart={cart}></Cart>
+                    <Cart cart={cart}>
+                        <button onClick={() => navigate('/inventory')}>procced cheakout</button>
+                    </Cart>
                 </div>
             </div>
         </div>
