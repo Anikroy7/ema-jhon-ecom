@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init'
 
 const Signup = () => {
 
@@ -7,7 +9,15 @@ const Signup = () => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setComfirmPassword] = useState('');
     const [error, setError] = useState('');
+    const [showLoading, setShowLoading] = useState(false);
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading
 
+    ] = useCreateUserWithEmailAndPassword(auth);
+
+    const navigte = useNavigate();
 
     const handelEmailBlur = event => {
         setEmail(event.target.value);
@@ -26,12 +36,27 @@ const Signup = () => {
 
         if (password !== confirmPassword) {
             setError(`password did't match `)
+            return;
         }
-
+        if (password.length < 6) {
+            setError('give at least 6 characters')
+            return;
+        }
+        createUserWithEmailAndPassword(email, password)
+        if (!user) {
+            navigte('/shop');
+        }
+        if (loading) {
+            setShowLoading(true)
+        }
     }
 
     return (
         <div>
+            {
+                showLoading ? <p>loading....</p> : <></>
+            }
+
             <form onSubmit={handelCreateUser} className="form-container">
                 <h3 className='form-title'>Sign Up </h3>
                 <div className='input-group'>

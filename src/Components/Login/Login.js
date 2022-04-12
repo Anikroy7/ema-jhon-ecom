@@ -21,7 +21,7 @@ const Login = () => {
                 </div>
 
                 <p className='new-user'>New to Ema-jhon? <Link
-                    to='/signup'>Create New Account</Link></p>
+                    to='/signup'>Create a New Account</Link></p>
 
             </form>
         </div >
