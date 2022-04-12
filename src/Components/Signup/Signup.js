@@ -51,10 +51,6 @@ const Signup = () => {
 
     return (
         <div>
-            {
-                loading && <p>loading....</p>
-            }
-
             <form onSubmit={handelCreateUser} className="form-container">
                 <h3 className='form-title'>Sign Up </h3>
                 <div className='input-group'>

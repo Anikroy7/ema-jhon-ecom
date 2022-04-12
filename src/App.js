@@ -9,6 +9,7 @@ import About from './Components/About/About'
 import Login from './Components/Login/Login';
 import Signup from './Components/Signup/Signup';
 import RequrieAuth from './Components/RequireAuth/RequrieAuth';
+import Shipment from './Components/Shipment/Shipment';
 function App() {
   return (
     <div>
@@ -23,6 +24,11 @@ function App() {
             <Inventory></Inventory>
           </RequrieAuth>}>
         </Route>
+        <Route path='/shipment' element={
+          <RequrieAuth>
+            <Shipment></Shipment>
+          </RequrieAuth>
+        }></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>

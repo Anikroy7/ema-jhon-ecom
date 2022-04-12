@@ -20,11 +20,11 @@ const Login = () => {
 
     const from = location.state?.from?.pathName || '/'
 
-
-    if (user) {
-        navigate(from, { replace: true })
-    }
-
+    useEffect(() => {
+        if (user) {
+            navigate(from, { replace: true })
+        }
+    }, [user])
 
 
     const handelEmailBlur = event => {
