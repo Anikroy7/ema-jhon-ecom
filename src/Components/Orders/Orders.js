@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import useCart from '../../hooks/useCart';
 import useProducts from '../../hooks/useProducts';
+import { removeFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart'
 import ReviewOrder from '../ReviewOrder/ReviewOrder';
 import './Orders.css'
@@ -16,6 +17,7 @@ const Orders = () => {
 
         const rest = cart.filter(pd => product.id !== pd.id);
         setcart(rest)
+        removeFromDb(product.id);
     }
 
     return (
