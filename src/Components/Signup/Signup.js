@@ -9,7 +9,7 @@ const Signup = () => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setComfirmPassword] = useState('');
     const [error, setError] = useState('');
-    const [showLoading, setShowLoading] = useState(false);
+
     const [
         createUserWithEmailAndPassword,
         user,
@@ -46,15 +46,13 @@ const Signup = () => {
         if (!user) {
             navigte('/shop');
         }
-        if (loading) {
-            setShowLoading(true)
-        }
+
     }
 
     return (
         <div>
             {
-                showLoading ? <p>loading....</p> : <></>
+                loading && <p>loading....</p>
             }
 
             <form onSubmit={handelCreateUser} className="form-container">
