@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Login.css'
 
@@ -16,11 +16,15 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    useEffect(() => {
-        if (user) {
-            navigate('/shop')
-        }
-    }, [user])
+    const location = useLocation();
+
+    const from = location.state?.from?.pathName || '/'
+
+
+    if (user) {
+        navigate(from, { replace: true })
+    }
+
 
 
     const handelEmailBlur = event => {
