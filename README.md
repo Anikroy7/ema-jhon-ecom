@@ -1,6 +1,6 @@
 # Ema_Jhon_Ecommerce
 
-Live Site Link: https://playful-daifuku-eaaa31.netlify.app/
+Live Site Link: https://ema-jhon-ecom-23e49.firebaseapp.com/shop
 ## Available Scripts
 
 In the project directory, you can run:
