@@ -3,10 +3,11 @@ import './Cart.css'
 
 const Cart = props => {
 
-    const { cart, children } = props;
+    const { cart } = props;
+    console.log(cart);
     let price = 0;
     let shipping = 0;
-    let quantity = 0
+    let quantity = 0;
     for (const product of cart) {
         quantity = quantity + product.quantity;
         price = price + product.price * product.quantity;

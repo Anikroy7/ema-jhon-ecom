@@ -9,15 +9,15 @@ import './Orders.css'
 
 const Orders = () => {
     const [products, setProducts] = useProducts();
-    const [cart, setcart] = useCart(products);
+    const [cart, setcart] = useCart();
 
     const navigate = useNavigate();
     console.log(navigate)
     const handelRemoveToCart = product => {
 
-        const rest = cart.filter(pd => product.id !== pd.id);
+        const rest = cart.filter(pd => product._id !== pd._id);
         setcart(rest)
-        removeFromDb(product.id);
+        removeFromDb(product._id);
     }
 
     return (
@@ -29,7 +29,7 @@ const Orders = () => {
                         cart.map(product => <ReviewOrder
                             product={product}
                             handelRemoveToCart={handelRemoveToCart}
-                            key={product.id}
+                            key={product._id}
                         ></ReviewOrder>)
                     }
 
